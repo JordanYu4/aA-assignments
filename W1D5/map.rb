@@ -21,16 +21,23 @@ class Map
   end
 
   def delete(key)
+    deleted = self.get(key)
     underlying_arr.reject! { |pair| pair.first == key }
+    deleted
   end
 
   def show
-    underlying_arr
+    # Giving direct reference risks unwanted changes
+    copy(underlying_arr)
   end
 
   private
 
   attr_accessor :underlying_arr
+
+  def copy(arr)
+    arr.map { |el| el.class == Array ? copy(el) : el }
+  end
 
 end
 
