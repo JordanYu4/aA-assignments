@@ -4,10 +4,10 @@ def sluggish_octopus(fish_arr)
   return fish_arr.first if fish_arr.length == 1
   fish_arr.length.times do
     if fish_arr.drop(1).all? { |fish| fish.length < fish_arr.first.length }
-      longest_fish = fish_arr.first
+      return fish_arr.first
     end
+    fish_arr.rotate
   end
-  longest_fish
 end
 
 def dominant_octopus(fish_arr)
