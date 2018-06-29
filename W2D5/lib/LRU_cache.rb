@@ -27,6 +27,6 @@ class LRUCache
 
   private
 
-  attr_acecessor :cache, :cache_size
+  attr_accessor :cache, :cache_size
 
 end
