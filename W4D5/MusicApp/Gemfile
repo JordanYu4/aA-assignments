@@ -64,6 +64,7 @@ group :test do
   gem 'chromedriver-helper'
   gem 'launchy'
   gem 'shoulda-matchers'
+  gem 'rails_helper'
   gem 'rspec-rails'
 end
 
