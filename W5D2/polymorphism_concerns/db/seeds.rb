@@ -13,3 +13,4 @@ end
 40.times do
   Toy.create(name: Faker::Superhero.name, toyable_id: rand(1..11), toyable_type: ['Corgi', 'Cat'].sample)
 end
+  
