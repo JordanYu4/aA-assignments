@@ -2,7 +2,7 @@ var path = require('path');
 
 module.exports = {
   context: __dirname,
-  entry: "./app.jsx",
+  entry: "./frontend/app.jsx",
   output: {
     path: path.resolve(__dirname),
     filename: "bundle.js"
@@ -14,7 +14,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015']
+          presets: ['react', 'env']
         }
       }
     ]
